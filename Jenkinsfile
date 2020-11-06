@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh "curl http://52.15.252.95:8080/job/APF_PDI/buildWithParameters?token=admin"
+				sh "curl http://admin:admin@52.15.252.95:8080/job/APF_PDI/buildWithParameters?token=admin"
             }
         }
         stage('Test') {
