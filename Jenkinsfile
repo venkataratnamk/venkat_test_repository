@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh "curl -X POST --user admin:11b0a151650fa22751ef1f0794a706bbcd http://52.15.252.95:8080/job/APF_PDI/buildWithParameters?Test=test"
+				sh "wget --auth-no-challenge --user=admin --password=11b0a151650fa22751ef1f0794a706bbcd http://52.15.252.95:8080/job/APF_PDI/buildWithParameters?Test=test"
 				
             }
         }
