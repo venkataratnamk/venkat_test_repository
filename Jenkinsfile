@@ -20,12 +20,6 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-		stage ('Invoke_pipeline') {
-		steps {
-			build job: 'http://52.15.252.95:8080/job/APF_PDI/job/main/', parameters: [
-			string(name: 'param1', value: "value1")
-			]
-		}
-}
+		
     }
 }
