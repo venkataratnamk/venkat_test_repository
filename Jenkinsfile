@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh "curl http://52.15.252.95:8080/job/APF_PDI/buildWithParameters --user admin:admin --data id=123 --data verbosity=high"
+				sh "curl http://52.15.252.95:8080/job/APF_PDI/buildWithParameters?USER=admin&VALUE=temp"
             }
         }
         stage('Test') {
